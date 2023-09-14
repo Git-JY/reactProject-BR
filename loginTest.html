@@ -23,7 +23,7 @@
   const naverLogin = new naver.LoginWithNaverId(
    {
     clientId: "vqGzligp1x3dDwrWaOEQ",
-    callbackUrl: "http://127.0.0.1:5500/loginTest.html",
+    callbackUrl: "https://git-jy.github.io/reactProject-BR/loginTest.html",
     loginButton: {color: "green", type: 2, height: 40}
     }
    );
@@ -63,7 +63,7 @@
       const logout=document.getElementById('btn_logout');
       logout.addEventListener('click',(e)=>{
         naverLogin.logout();
-    location.replace("http://127.0.0.1:5500");
+    location.replace("https://git-jy.github.io/reactProject-BR/loginTest.html");
       })
     }
 
