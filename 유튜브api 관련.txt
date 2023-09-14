@@ -1,0 +1,40 @@
+
+책
+https://openapi.naver.com/v1/search/blog.json?query=모네의고양이 책 리뷰
+X-Naver-Client-Id                   vqGzligp1x3dDwrWaOEQ
+X-Naver-Client-Secret          oweJmF7ryP
+
+
+
+블로그
+https://openapi.naver.com/v1/search/blog.json?query=모네의고양이 책 리뷰
+
+
+
+
+
+
+유튜브
+https://www.googleapis.com/youtube/v3/search?key=AIzaSyBblyK8KTUyGb06f2ZckwaAHQUorysCJe0&q=고양이책리뷰&type='video'&part=snippet
+
+구글 - '사용자 인증 정보 페이지' 에서 키 확인 가능
+AIzaSyBblyK8KTUyGb06f2ZckwaAHQUorysCJe0
+
+https://www.googleapis.com/youtube/v3/search
+params:
+key - AIzaSyBblyK8KTUyGb06f2ZckwaAHQUorysCJe0
+q - 키워드
+type - 'video'
+part - snippet
+
+이때 나오는 'items[인덱스번호].id.videoId'를 아래 'videoId' 에 넣으면 나오는 것들
+(실제로 ''넣지 마삼 구분하기 편하라고 쓴 거임)
+https://www.youtube.com/watch?v='videoId' //유튜브 url 
+-> 영상 길이 이따구로 가져올 수 있다고 함
+getVideoDuration(videoId, function (duration) {
+                            const listItem = `<p><a href="${videoUrl}" target="_blank">${item.snippet.title}</a> - Duration: ${duration}</p>`;
+                            videoList.append(listItem);
+                        });
+//자세한 사항은 이주영(그린컴퓨터아카데미) > react-project > test > test.html 참고 // duration이 'PT3M26S' 이라고 나오는 데, PT는 시간을 뜻하고, 3M은 3분, 26은 26초임
+
+https://www.youtube.com/embed/'videoId' //유튜브 iframe
